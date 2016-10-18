@@ -3,6 +3,8 @@ package com.billstock;
 import java.util.Scanner;
 
 /**
+ * Class with main method
+ * Select Add Items-Issue Items-Display Items
  * Created by hsenid on 10/17/16.
  */
 public class ItemDemo {

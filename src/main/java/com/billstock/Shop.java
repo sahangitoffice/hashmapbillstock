@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 /**
+ * Class with methods Add Item(), Search Item(), Display Item(), Issue Item()
  * Created by hsenid on 10/17/16.
  */
 public class Shop {
@@ -35,16 +36,11 @@ public class Shop {
             aRate = sc.nextDouble();
             System.out.println("Quantity : ");
             aQuantity = sc.nextInt();
-            //Item aItem = new Item(aName, aRate, aCode, aQuantity);
-            //ItemList.add(aItem);
 
             mapper.put(aCode, new Item(aName,aRate,aCode,aQuantity));
 
-        //} else if (foundItem != null) {
-           // System.out.println("Item exists");
-
         }
-        //return message;
+
 
     private Item search(String code) {
         //Iterator<Item> itr = mapper.iterator();
@@ -58,19 +54,7 @@ public class Shop {
             return null;
         }
 
-        /*
-        Item item;
 
-        Collection c = mapper.values();
-        Iterator itr = c.iterator();
-        while (itr.hasNext()) {
-            item= (Item)c;
-            if(item.getCode().equals("code")) {
-                return item;
-            }
-        }
-        return null;
-        */
     }
 
 
@@ -85,32 +69,19 @@ public class Shop {
 
         if(letter.equals("S")){
 
-            //System.out.println("Enter Code");
-            //code = sc.next();
-
-            //String [] items = itemName.split("\\s*,\\s*");
-
-            //System.out.println();
-
-            //Item value = mapper.get(code);
-             //String allData = value.getCode()+""+value.getName()+""+value.getQuantity()+""+value.getRate();
-
-            //System.out.println(allData);
-
             for (String name1: mapper.keySet()){
 
                 String key =name1.toString();
                 String value1 = mapper.get(name1).toString();
-                //String value2 = mapper.get(code).toString();
-                //String value3 = mapper.ge
+
                 System.out.println(key + " " + value1);
 
             }
 
         }else {
-            //for (Item a : ItemList) {
+
                 System.out.println("ok");
-            //}
+
         }
     }
 

@@ -1,6 +1,7 @@
 package com.billstock;
 
 /**
+ * Item class with Item Constructor
  * Created by hsenid on 10/17/16.
  */
 public class Item {
@@ -11,6 +12,11 @@ public class Item {
     private int quantity;
 
 
+    /**
+     *
+     * Item constructor
+     *
+     */
     public Item(String name, double rate, String code, int quantity){
         this.name = name;
         this.rate = rate;
