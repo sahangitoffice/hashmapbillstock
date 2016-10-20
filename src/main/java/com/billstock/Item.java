@@ -6,18 +6,20 @@ package com.billstock;
  */
 public class Item {
 
+    private String id;
     private String name;
     private double rate;
-    private String code;
+    private int code;
     private int quantity;
-
 
     /**
      *
      * Item constructor
      *
      */
-    public Item(String name, double rate, String code, int quantity){
+
+    public Item(String id,String name, double rate, int code, int quantity){
+        this.id=id;
         this.name = name;
         this.rate = rate;
         this.code = code;
@@ -26,7 +28,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item [name=" + name + ", rate=" + rate + ", code=" + code
+        return "Item [id="+ getId() +",name=" + name + ", rate=" + rate + ", code=" + code
                 + ", quantity=" + quantity + "]";
     }
     
@@ -46,11 +48,11 @@ public class Item {
         this.rate = rate;
     }
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
@@ -62,4 +64,11 @@ public class Item {
         this.quantity = quantity;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }
