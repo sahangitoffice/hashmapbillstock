@@ -50,7 +50,7 @@ public class Shop {
         }
     }
 
-    private Item search(int code) {
+    public Item search(int code) {
 
         Item item =mapper.get(code);
 
@@ -63,8 +63,9 @@ public class Shop {
     }
 
 
-    public void display() {
+    public boolean display() {
 
+        boolean x=false;
         String letter;
         String code;
         //Item foundItem;
@@ -82,14 +83,19 @@ public class Shop {
 
                 System.out.println(key + " " + value1);
 
+                 x =true;
+
             }
 
         }else {
 
                 System.out.println("no Items to Display");
+             x =true;
 
         }
+        return x;
     }
+
 
     public void issueItem() {
 
